@@ -325,3 +325,151 @@
   Out[66]: ['a', 'b', 'c']
   ```
 
+
+
+
+### First Steps Towards Programming
+
+```python
+In [1]: a,b = 0,1
+
+In [2]: while b < 10:
+   ...:     print(b)
+   ...:     a,b = b,a+b
+   ...:     
+1
+1
+2
+3
+5
+8
+```
+
+- **multiple assignment** is ok!,for example ,`a,b = 0,1`
+
+- In Python ,any non-zero integer value is true,zero is false, and anything with a non-zero length is true,empty sequences are false.
+
+- **Indentation is Python' way of grouping statements**.and each line within a basic block must be indented by **the same amount.**
+
+- The `print()` function has a keyword argument `end` can be used to avoid the newline after the output,  or end the output with a different string
+
+  ```python 
+  >>> a = 1
+  >>> while a < 10:
+  ...     print(a,end=', ')
+  ...     a = a + 1
+  ... 
+  1, 2, 3, 4, 5, 6, 7, 8, 9, >>> 
+  ```
+
+
+### `if` Statements
+
+The keyword `elif` is short for `else if`,and `if` ... `elif` ... `else` ... sequence is a substitute for the `switch` or `case` statements found in other languages.
+
+```python
+In [1]: x = 1
+
+In [2]: if x == 0:
+   ...:     print('0')
+   ...: elif x == 1:
+   ...:     print('1')
+   ...: else:
+   ...:     pass
+   ...: 
+1
+```
+
+### for Statements
+
+Python's `for` statement iterates over the item of any sequence(a list or string), in the order that they appear in the sequence:
+
+```python
+In [1]: word = ['a','b','c']
+
+In [2]: for w in word[:]:
+   ...:     print(w)
+   ...:     
+a
+b
+c
+
+```
+
+If you do need to iterate over a sequence of numbers, the built-in-function `range()` comes in handy.and it's possible to let the range start at another number, or to specify a different increment.
+
+```python
+In [3]: for i in range(5):
+   ...:     print(i)
+   ...:     
+0
+1
+2
+3
+4
+
+In [4]: for i in range(5,10):
+   ...:         print(i)
+   ...:             
+5
+6
+7
+8
+9
+
+In [5]: for i in range(10,20,2):
+   ...:         print(i)
+   ...:                     
+10
+12
+14
+16
+18
+
+In [6]: for i in range(10,0,-1):
+   ...:         print(i)
+   ...:         
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+```
+
+You can combine `range()` and `len()` to iterate over the indices of a sequence:
+
+```python
+In [7]: a = ['Wu','Xiao','Bai']
+
+In [8]: for i in range(len(a)):
+   ...:     print(i,a[i])
+   ...:     
+0 Wu
+1 Xiao
+2 Bai
+
+In [10]: list(enumerate(a))
+Out[10]: [(0, 'Wu'), (1, 'Xiao'), (2, 'Bai')]
+
+```
+
+In many ways the object return by  `range()` behaves as if it is a list, but in fact it isn't. **It is an object which return the successive items of the desired sequence when you iterate over it**,We say such an object is **iterable**,and creates lists from iterables by `list()`
+
+```python
+In [11]: range(10)
+Out[11]: range(0, 10)
+
+In [12]: list(range(10))
+Out[12]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+```
+
+### `break` and `continue` Statement, and `else` Clauses on Loops
+
+- `break` statement break outs of the innermost enclosing `for` or `while` loop.
+- Loop statements may have an `else` clauses,it is executed when the loop terminates through exhaustion of the list(with `for`) or when the condition becomes false(with `while`)
