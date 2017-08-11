@@ -81,43 +81,15 @@ mysql> SHOW DATABASES;
 
 ```mysql
 mysql> SHOW TABLES;
-+---------------------------+
-| Tables_in_mysql           |
-+---------------------------+
-| columns_priv              |
-| db                        |
-| engine_cost               |
-| event                     |
-| func                      |
-| general_log               |
-| gtid_executed             |
-| help_category             |
-| help_keyword              |
-| help_relation             |
-| help_topic                |
-| innodb_index_stats        |
-| innodb_table_stats        |
-| ndb_binlog_index          |
-| plugin                    |
-| proc                      |
-| procs_priv                |
-| proxies_priv              |
-| server_cost               |
-| servers                   |
-| slave_master_info         |
-| slave_relay_log_info      |
-| slave_worker_info         |
-| slow_log                  |
-| tables_priv               |
-| time_zone                 |
-| time_zone_leap_second     |
-| time_zone_name            |
-| time_zone_transition      |
-| time_zone_transition_type |
-| user                      |
-+---------------------------+
-31 rows in set (0.00 sec)
-
++-----------------+
+| Tables_in_tests |
++-----------------+
+| areas           |
+| cities          |
+| provinces       |
+| zipcode         |
++-----------------+
+4 rows in set (0.00 sec)
 ```
 
 ### 3.3.3 显示表列
@@ -135,34 +107,17 @@ mysql> describe db;
 
 
 ```mysql
-mysql> SHOW COLUMNS FROM db;
-+-----------------------+---------------+------+-----+---------+-------+
-| Field                 | Type          | Null | Key | Default | Extra |
-+-----------------------+---------------+------+-----+---------+-------+
-| Host                  | char(60)      | NO   | PRI |         |       |
-| Db                    | char(64)      | NO   | PRI |         |       |
-| User                  | char(32)      | NO   | PRI |         |       |
-| Select_priv           | enum('N','Y') | NO   |     | N       |       |
-| Insert_priv           | enum('N','Y') | NO   |     | N       |       |
-| Update_priv           | enum('N','Y') | NO   |     | N       |       |
-| Delete_priv           | enum('N','Y') | NO   |     | N       |       |
-| Create_priv           | enum('N','Y') | NO   |     | N       |       |
-| Drop_priv             | enum('N','Y') | NO   |     | N       |       |
-| Grant_priv            | enum('N','Y') | NO   |     | N       |       |
-| References_priv       | enum('N','Y') | NO   |     | N       |       |
-| Index_priv            | enum('N','Y') | NO   |     | N       |       |
-| Alter_priv            | enum('N','Y') | NO   |     | N       |       |
-| Create_tmp_table_priv | enum('N','Y') | NO   |     | N       |       |
-| Lock_tables_priv      | enum('N','Y') | NO   |     | N       |       |
-| Create_view_priv      | enum('N','Y') | NO   |     | N       |       |
-| Show_view_priv        | enum('N','Y') | NO   |     | N       |       |
-| Create_routine_priv   | enum('N','Y') | NO   |     | N       |       |
-| Alter_routine_priv    | enum('N','Y') | NO   |     | N       |       |
-| Execute_priv          | enum('N','Y') | NO   |     | N       |       |
-| Event_priv            | enum('N','Y') | NO   |     | N       |       |
-| Trigger_priv          | enum('N','Y') | NO   |     | N       |       |
-+-----------------------+---------------+------+-----+---------+-------+
-22 rows in set (0.01 sec)
+mysql> SHOW COLUMNS FROM areas;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| areaid | varchar(20) | NO   |     | NULL    |                |
+| area   | varchar(50) | NO   |     | NULL    |                |
+| cityid | varchar(20) | NO   |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
 
 ```
 
