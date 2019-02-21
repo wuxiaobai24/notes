@@ -120,3 +120,12 @@ Ubuntu16.10:
 tcp        0      0 localhost:mysql         0.0.0.0:*               LISTEN      1043/mysqld 
 ```
 
+Manjaro or Arch:
+
+```shell
+$ sudo pacman -S mariadb mariadb-clients
+$ sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+$ sudo systemctl start mysqld.service
+$ sudo mysqladmin -u root -h wuxiaobai24-pc password 'wuxiaobai24' 
+```
+

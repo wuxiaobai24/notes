@@ -1,5 +1,13 @@
 # 使用MySQL
 
+## 3.0 建立一个数据库:
+
+```shell
+$ mysqladmin -u root -p create mydatabase 
+```
+
+
+
 ## 3.1 连接
 
 MySQL与所以客户机-服务器DBMS一样，要求在能执行命令前登录到DBMS。
