@@ -12,7 +12,7 @@ To Do:
   
     > 推荐一个每夜更新的镜像：[https://book.itsfun.tk/gopl-zh](https://book.itsfun.tk/gopl-zh)，来源见[issue](https://github.com/golang-china/gopl-zh/issues/43)
     
-- [x] [Go语言实战](https://book.douban.com/subject/27015617/)
+- [x]] [Go语言实战](https://book.douban.com/subject/27015617/)
 
     > 略简单，但是最开始接触Go的时候还是不错的。
     
