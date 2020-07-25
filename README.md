@@ -27,7 +27,7 @@
 
 ## DevOps    
 
-- [ ] [深入浅出 Docker](https://book.douban.com/subject/30486354/) -> [note](devops/《深入浅出Docker》.md)
+- [ ] [深入浅出 Docker](https://book.douban.com/subject/30486354/) -> [note](DevOps/《深入浅出Docker》.md)
 - [ ] [自己动手写 Docker](https://book.douban.com/subject/27082348/)
 
 ## Others
